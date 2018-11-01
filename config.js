@@ -23,4 +23,4 @@ exports.config = {
     encryptMethod: 'AES'
 };
 // 是否为调试环境
-exports.debug = false;
+exports.debug = true;

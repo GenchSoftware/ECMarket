@@ -1,7 +1,6 @@
 const { app, BrowserWindow } = require('electron')
 const { ipcMain } = require('electron')
 const path = require('path')
-const fs = require('fs')
 const config = require('./config')
 const aes = require('./secretModule/aesModule')
 
@@ -35,4 +34,16 @@ app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
         app.quit();
     }
+})
+
+ipcMain.on('logdirErr', (event, arg) => {
+    console.log('log dir created failed, System will quit in 2 seconds.');
+    main.hide();
+    const { dialog } = require('electron');
+    dialog.showErrorBox('日志文件夹创建错误', '日志文件夹创建失败，系统将在两秒内自动退出，请联系管理员处理。');
+    setTimeout(() => {
+        app.quit();
+    }, 2000);
+    event.returnValue = 'system will quit';
+
 })

@@ -13,18 +13,35 @@
             min-height: 100%;
         }
         
+        @font-face {
+            font-family: Pacifico-Regular;
+            src: url('./static/fonts/Pacifico-Regular.ttf');
+        }
+        
+        #title {
+            padding-left: 10%;
+            padding-top: 10%;
+            white-space: nowrap;
+        }
+        
+        #title h1 {
+            white-space: nowrap;
+            display: inline;
+        }
+        
         body {
+            background-image: url("./static/img/index_background.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             margin-bottom: 60px;
-            /* Margin bottom by footer height */
         }
         
         .footer {
             position: absolute;
             bottom: 0;
             width: 100%;
-            /* Set the fixed height of the footer here */
             line-height: 60px;
-            /* Vertically center the text there */
             /*background-color: #c8c9c9;*/
         }
         
@@ -36,6 +53,8 @@
         .alert {
             border-radius: 0px;
             margin-bottom: 0px;
+            font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+            opacity: 0.7;
         }
         
         .progress {
@@ -45,27 +64,29 @@
 </head>
 
 <body>
-    <h2>Test:AES encrypted 此位置预留放置一张漂亮的图</h2>
+    <div id="title">
+        <h1 style="font-family:'Times New Roman', Times, serif">EC </h1>
+        <h1 style="font-family: 'Pacifico-Regular'">Market</h1>
+    </div>
     <div id="Test">
         <h1 id="AESTest"></h1>
     </div>
-    <!-- Footer -->
     <footer class="footer">
         <div class="container-fluid">
             <div class="alert alert-dark" role="alert">
-                <h4>系统正在加载数据中...</h4>
+                <h4>系统正在初始化中...</h4>
                 <hr>
-                <h5 id="process">正在加载： Test</h5>
+                <h5 id="process">正在检测配置文件...</h5>
             </div>
             <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 2%"></div>
             </div>
         </div>
     </footer>
-    <script src="./index.js"></script>
     <script src="./static/js/bootstrap.min.js"></script>
     <script src="./static/js/jquery-3.3.1.min.js"></script>
     <script src="./static/js/bootstrap.bundle.min.js"></script>
+    <script src="./index.js"></script>
 
 </body>
 

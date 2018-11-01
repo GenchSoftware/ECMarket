@@ -9,6 +9,7 @@ const fs = require('fs')
 exports.Log = (level, origin, data) => {
     var now = new Date();
     var timeNow = now.toLocaleString();
+    console.log('[' + timeNow + '] 【' + level + '】 ' + origin + '：' + data)
 }
 
 
@@ -19,7 +20,7 @@ exports.Log = (level, origin, data) => {
  * @param WARNING 警告
  * @param ERROR 错误
  */
-exports.level = {
+exports.Level = {
     INFO: 'INFO',
     DEBUG: 'DEBUG',
     WARNING: 'WARNING',
