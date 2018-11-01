@@ -1,0 +1,22 @@
+{
+    "name": "ecmarket",
+    "version": "1.0.0",
+    "description": "Shanghai JianQiao U. 2018-2019 Software Project Management homework ECMarket unlimited version.",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "electron-packager . --out=build --platform=win32 --arch=x64 --electron-version 3.0.4 --icon=static/img/icon.ico --asar=true --overwrite"
+    },
+    "keywords": [
+        "Software",
+        "Project",
+        "Management",
+        "homework",
+        "ECMarket",
+        "Market",
+        "System"
+    ],
+    "author": "ECode Shanghai JianQiao U.",
+    "license": "Apache-2.0"
+}
